@@ -1,0 +1,292 @@
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tabu}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Ant\'onio Silva}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Informa\c c\~ao Pessoal}\vspace{0.5em} % Personal information heading
+
+\NewEntry{}{\textit{Braga,}}{09 Dezembro 1983} % Birthplace and date
+
+\NewEntry{email}{\href{mailto:pg11024@gmail.com}{pg11024@gmail.com}} % Email address
+
+\NewEntry{sítio}{\href{http://about.me/an.silva}{http://about.me/an.silva}} % Personal website
+
+\NewEntry{contacto}{(T) +351 253 942 463\ \ $\cdotp$\ \ (M) +351 926 165 455} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{Resumo}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+\Description{Software Engineer com experiência profissional na especificação e desenvolvimento de soluções de software em serviços online e tempo real. Especializei-me nas tecnologias JAVA, OutSystems e Oracle. Neste momento exerço funções de consultor externo na Meditel. Procuro novos desafios profissionais na área de desenvolvimento, podendo assim trabalhar nas tecnologias mais recentes e solidificar o meu conhecimento TI. }\vspace{2em} % Goal text
+
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Experi\^encia Profissional}\vspace{1em}
+%-----
+
+
+
+\NewEntry{Desde 2013}{Associate Technical Consultant, \textsc{CGI} --- Lisboa}
+
+\Description{\MarginText{CGI} Após aquisição da empresa \textsc{Logica} por parte pelo grupo \textsc{CGI} mantive-me no projecto anterior referenciado como \emph{PPS} conjuntamente com a sua migração.}
+\vspace{1em}
+
+\Description{
+ {\tabulinesep=0.15cm
+\begin{tabu}{lrr}
+\large{\textit{meditel}} & \scriptsize{Casablanca (Marrocos)}  &  \scriptsize{Desde 2013} \\
+\textit{Migração PPS} & \multicolumn{2}{r}{\textit{Associate Technical Consultant}}\\
+\multicolumn{3}{p{\linewidth}}{Migração do projecto designado como \emph{PPS}~\nameref{sec:pps}, da versão Oracle 10G para 11G e
+do Weblogic 8.1 SP4 para a versão 11G (10.3.6).
+Efectuei essencialmente suporte à equipa de migração e instrução do negócio da aplicação à equipa responsável pela migração.}\\
+\scriptsize{\textsc{Tecnologias Chave}} & JEE6, JMS, MyBatis, Oracle, PL-SQL, Webservices. \\
+\scriptsize{\textsc{Referência}} & \multicolumn{2}{c}{Filipe \textsc{Botelho}\ \ +351 935 059 306\ \ $\cdotp$\ \ \href{mailto:filipe.botelho@cgi.com}{filipe.botelho@cgi.com}}  \\\hline
+\end{tabu}
+}}
+
+\vspace{1em}
+\NewEntry{2009 --- 2012}{Associate Technical Consultant, \textsc{Logica}  --- Lisboa}
+
+\Description{\MarginText{Logica} Durante o meu percurso pela Logica trabalhei em vários projectos em regime de Outsourcing que são descritos seguidamente. }
+\vspace{1em}
+\Description{
+ {\label{sec:pps}
+\tabulinesep=0.15cm
+\begin{tabu}{lrr}
+\large{\textit{meditel}} & \scriptsize{Casablanca (Marrocos)}  &  \scriptsize{Desde 2011} \\
+\textit{PPS} & \multicolumn{2}{r}{\textit{Associate Technical Consultant}}\\
+\multicolumn{3}{p{\linewidth}}{ %
+Durante os últimos anos participei na análise, especificação e desenvolvimento de módulos tanto no regime de manutenção evolutiva como de novas funcionalidades, em um sistema de gestão de cartões e serviços Prépagos. Também efectuei suporte à produção respeitando as metas previamente acordadas e supervisionadas pelo cliente, cumprindo um contracto de \emph{SLA}\footnote{Service Level Agreement} de target de 90\%, seguindo as boas prácticas das normas \emph{ITIL}. Complementarmente efectuei administração em servidores de \emph{Oracle}, e \emph{Weblogic} sob um ambiente \emph{HP-UX} (posteriormente \emph{IBM-AIX}).
+
+Realizei acompanhamento de novos membros na equipa.
+
+Principais Responsabilidades da aplicação:
+\begin{itemize}
+\item Geração de códigos e gestão de carregamentos;
+\item Gestão de serviços;
+\item Ciclo de Vida de Aplicações;
+\item Histórico;
+\item Reporting.
+\end{itemize}
+}\\
+\scriptsize{\textsc{Tecnologias}} &  \multicolumn{2}{p{9cm}}{HTML, JS/AJAX, J2EE, Quartz, ibatis, XML Beans, Reflection, Oracle, PL-SQL, (S)FTP (Unix, RTP, SSL, cron.), entre outras menos
+relevantes.}\\
+\scriptsize{\textsc{Referência}} & \multicolumn{2}{c}{Nuno \textsc{Pedro}\ \ +351 964 093 680\ \ $\cdotp$\ \ \href{mailto:nuno.pedro@cgi.com}{	nuno.pedro@cgi.com}}  \\\hline
+\end{tabu}
+}}
+\vspace{1em}
+
+\Description{
+ {\tabulinesep=0.15cm
+\begin{tabu}{lrr}
+\large{\textit{zon}} & \scriptsize{Lisboa}  &  \scriptsize{2010 --- 2011} \\
+\textit{SnowFlake} & \multicolumn{2}{r}{\textit{Associate Technical Consultant}}\\
+\multicolumn{3}{p{\linewidth}}{Extensão do projecto designado como SVA para os Subscritores do 
+serviço Íris Zon Fibra.  Neste serviço foi incluído o registo de canais (ou pacotes de canais) dos 
+clientes, bem como outros serviços\footnote{Serviços como por exemplo a possibilidade de trocar a Sport TV de Box.}.}\\
+\scriptsize{\textsc{Tecnologias Chave}} &  \multicolumn{2}{p{9cm}}{Outsystems, Oracle, C\#, BAPI.}\\
+\scriptsize{\textsc{Referência}} & \multicolumn{2}{c}{Ricardo \textsc{Saraiva}\ \ +351 934 813 230\ \ $\cdotp$\ \ \href{mailto:silvasaraiva@gmail.com}{silvasaraiva@gmail.com}}  \\\hline
+\end{tabu}
+}}
+\vspace{1em}
+
+\Description{
+ {\tabulinesep=0.15cm
+\begin{tabu}{lrr}
+\large{\textit{zon}} & \scriptsize{Lisboa}  &  \scriptsize{2010 --- 2010} \\
+\textit{Compras} & \multicolumn{2}{r}{\textit{Junior Technical Consultant}}\\
+\multicolumn{3}{p{\linewidth}}{Desenvolvimento da plataforma do Processo de Compras que com o 
+objectivo de registo e catalogação de recursos adquiridos. O processo assentava num Workflow de aprovação
+ em que o fluxo variava dependendo do fornecedor, valor da compra, e departamento implicado. O processo
+ integrava-se com \emph{SAP} e \emph{Filenet} por forma a manter todos os sistemas actualizados de forma transversal.
+
+As funcionalidades primárias desta solução seriam:
+\begin{itemize}
+\item Facturação;
+\item Pagamentos;
+\item Leilões;
+\item Indicadores.
+\end{itemize} }\\
+\scriptsize{\textsc{Tecnologias Chave}} &  \multicolumn{2}{p{9cm}}{SAP, Outsystems Transparency Services, Supplier Self Services, Supply Services, Outsystems BPT, Filenet.}  \\
+\scriptsize{\textsc{Referência}} & \multicolumn{2}{c}{Tiago \textsc{Reis}\ \ +351 932 519 365\ \ $\cdotp$\ \ \href{mailto:t.reis@cgi.com}{	t.reis@cgi.com}}  \\\hline
+\end{tabu}
+}}
+\vspace{1em}
+
+
+\Description{
+ {\tabulinesep=0.15cm
+\begin{tabu}{lrr}
+\large{\textit{zon}} & \scriptsize{Lisboa}  &  \scriptsize{2010 --- 2010} \\
+\textit{SVA \& Bundles, RIVA} & \multicolumn{2}{r}{\textit{Junior Technical Consultant}}\\
+\multicolumn{3}{p{\linewidth}}{ %
+Desenvolvimento de Base de Dados de cadastro e gestão de Serviços de Valor Acrescentado. A aplicação tinha 
+como função a configuração e inscrição de serviços baseado em catálogo\footnote{Como serviços de Antivírus e Backup Online} e a
+gestão de portfólio de cliente. Cada serviço era processado através de um Workflow dedicado podendo este ser configurado. Foi
+também possível integrar Bundles (Oferta baseada em pacote.). Desenvolvi também uma aplicação de tracking de mensagens
+recebidas através de \emph{Webservices}, e uma aplicação de reembolso do IVA (\emph{RIVA}). Desenvolvi o motor gráfico 
+do Workflow usando \emph{Graphviz}.
+}\\
+\scriptsize{\textsc{Tecnologias Chave}} & \multicolumn{2}{p{9cm}}{PL-SQL, Outsytstems, Workflow Dinâmico, XSLT, C\#, Graphviz.}\\
+\scriptsize{\textsc{Referência}} & \multicolumn{2}{c}{Miguel \textsc{Bangueses}\ \ +351 929 029 263\ \ $\cdotp$\ \ \href{mailto:miguel.bangueses@zon.pt}{miguel.bangueses@zon.pt}}  \\\hline
+\end{tabu}
+}}
+\vspace{1em}
+
+\Description{
+ {\tabulinesep=0.15cm
+\begin{tabu}{lrr}
+\large{\textit{tmn}} & \scriptsize{Lisboa}  &  \scriptsize{2009 --- 2010} \\
+\textit{GAVE} & \multicolumn{2}{r}{\textit{Junior Technical Consultant}}\\
+\multicolumn{3}{p{\linewidth}}{ %
+Desenvolvimento na aplicação de gestão das Blue Stores da PT (em Oracle Forms), e sua migração para um ambiente 
+Java. Trabalhei essencialmente na actividade de Protecção de
+ Stocks realizando também os testes complementares\footnote{Testes unitários.} ao desenvolvimento.
+}\\
+\scriptsize{\textsc{Tecnologias Chave}} & \multicolumn{2}{p{9cm}}{PL-SQL, Oracle Forms, J2EE, OC4J/OAS, Prototype JS.}\\
+\scriptsize{\textsc{Referência}} & \multicolumn{2}{c}{Margarida \textsc{Brazão}\ \ +351 964 057 747\ \ $\cdotp$\ \ \href{mailto:margarida.brazao@gmail.com}{margarida.brazao@gmail.com}}  \\\hline
+\end{tabu}
+}}
+\vspace{1em}
+
+\NewEntry{2008 --- 2009}{Developer, \textsc{Edp -- Renováveis} --- Porto}
+
+\Description{\MarginText{Edp -- Renováveis}  
+	Durante o meu estágio desenvolvi uma aplicação com a finalidade da inventariação e gestão
+ documental da informação relativa 
+aos Parques eólicos da EDP Renováveis. Efectuei também a instalação e configuração de routers Cisco nos parques eólicos, gestão de um pequeno datacenter (APC 5 Racks).
+\\\vspace{0.5em}
+\tabulinesep=0.15cm
+\begin{tabu}{lc}
+\scriptsize{\textsc{Tecnologias Chave}} &  Obout, ASP.Net C\#, SQL-Server, Transact-SQL\\
+\scriptsize{\textsc{Referência}} &Sérgio \textsc{Pereira}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:sergio.pereira@edp.pt}{sergio.pereira@edp.pt} \\\hline
+\end{tabu}
+}
+
+
+
+\vspace{1em} % Extra space between major sections
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Educa\c c\~ao}\vspace{1em}
+
+\NewEntry{2010}{Outsystems}
+
+\Description{\MarginText{Outsystems Associate Developer}\newline
+Descrição: Desenvolvimento de Aplicações WEB Orientada ao Negócio usando a metedologia Agile.}
+
+\NewEntry{2010}{Síntese Azul}
+
+\Description{\MarginText{Basic Consulting Skills}\ \ $\cdotp$\ \ \textit{Desenvolvimento Pessoal e Organizacional}\ \ $\cdotp$\ \ \newline
+Descrição: Formação com objectivo de abordar as competências internas e os comportamentos dia-a-dia exigidas a um consultor. Adicionalmente propunha um conjunto de modelos para auxílio na gestão de projectos.}
+
+\NewEntry{2009}{Logica}
+
+\Description{\MarginText{Introdução ao TIBCO}\newline
+Descrição: Formação de introdução a um ambiente SOA e demonstração das várias ferramentas disponibilizadas pela plataforma TIBCO.}
+
+
+\NewEntry{2002 --- 2007}{Universidade do Minho}
+
+\Description{\MarginText{Licenciatura em Engenharia Informática}\ \ $\cdotp$\ \ \textit{Departamento de Informática}\newline
+Descrição: Curso focado no desenvolvimento e implementação projetos que envolvam soluções informáticas, para ambientes de redes locais e Internet}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Compet\^encias Inform\'aticas}\vspace{1em}
+
+\Description{\MarginText{Básico} TIBCO}
+
+\Description{\MarginText{Intermédio} \LaTeX, XML, AJAX}
+
+\Description{\MarginText{Avançado} JAVA, J2EE Struts, PL-SQL, ibatis, Outsystems}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Outras Informa\c c\~oes}\vspace{1em}
+
+\Description{\MarginText{Prémios}2012\ \ $\cdotp$\ \ Logica Iberia Talent}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2011\ \ $\cdotp$\ \ Logica Iberia Talent}
+
+%------------------------------------------------
+
+\vspace{1em}
+
+\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+
+\Description{\MarginText{L\'inguas}\parbox{\langbox}{\textsc{Português}}\ \ \ \ $\cdotp$\ \ \ Língua-mãe}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{Inglês}}\ \ \ \ $\cdotp$\ \ \ Intermédio (Conversa Fluente)}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{Francês}}\ \ \ \ $\cdotp$\ \ \ Básico (Palavras básicas e frases)}
+
+\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%------------------------------------------------
+
+\Description{\MarginText{Soft Skills} \ \ $\cdotp$\ \ Optimista\ \ $\cdotp$\ \ Responsável\ \ $\cdotp$\ \ Sentido de Humor \ $\cdotp$\ \ Líder}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
